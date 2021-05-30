@@ -12,9 +12,9 @@ Active Passive And Products
  
 ## İndex.php 
 
--Shows edit status or errors in h2 tag (via active data.js)  
+->Shows edit status or errors in h2 tag (via active data.js)  
 ![alt text](https://github.com/FRTYZ/Active-passive-project-with-JQUERY-Ajax---PHP-MYSQL--with-PDO-/blob/main/img/ss/home-edit.png?raw=true)
--As you can see, passive ones do not appear in the product table.
+->As you can see, passive ones do not appear in the product table.
 
 ## Datable Table
 Note=Apply the Active column of our Database Table with the data type "int" and the default part "no default" 
