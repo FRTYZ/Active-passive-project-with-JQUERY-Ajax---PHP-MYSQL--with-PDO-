@@ -1,6 +1,6 @@
 # Active passive project with JQUERY Ajax | PHP MYSQL (with PDO)
 
-#Hello there,
+# Hello there,
 With JQUERY Ajax, you can create more practical and efficient sites by entering the active and passive button in the Admin panel in your projects or applications with active and passive.
 
 ## How Our Project Works,
