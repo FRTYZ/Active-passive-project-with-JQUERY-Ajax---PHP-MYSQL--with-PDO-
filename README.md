@@ -11,10 +11,10 @@ Active Passive And Products
 ![alt text](https://github.com/FRTYZ/Active-passive-project-with-JQUERY-Ajax---PHP-MYSQL--with-PDO-/blob/main/img/ss/home.png?raw=true)
  
 ## İndex.php 
-![alt text](https://github.com/FRTYZ/Active-passive-project-with-JQUERY-Ajax---PHP-MYSQL--with-PDO-/blob/main/img/ss/home-edit.png?raw=true)
 
+#### -Shows edit status or errors in h2 tag (via active data.js)  
+![alt text](https://github.com/FRTYZ/Active-passive-project-with-JQUERY-Ajax---PHP-MYSQL--with-PDO-/blob/main/img/ss/home-edit.png?raw=true)
 -As you can see, passive ones do not appear in the product table.
-#### -Shows edit status or errors in h2 tag (via active data.js) 
 
 ## Datable Table
 Note=Apply the Active column of our Database Table with the data type "int" and the default part "no default" 
