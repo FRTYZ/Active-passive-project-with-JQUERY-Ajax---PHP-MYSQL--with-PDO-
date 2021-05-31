@@ -21,7 +21,7 @@
                         <th>Active</th>                       
                     </thead>
                     <?php
-                    include('fonk.php'); // We include our database on our pages
+                    include('fonc.php'); // We include our database on our pages
                     $query = $connect->prepare("Select * from products"); // We write our query to sort our data by id
                     $query->execute(); // We start the query
 
@@ -36,7 +36,7 @@
                                 <label class="switch">
                                     <!-- We added id and active (1 or 0) information to our checkbox -->
                                     <input type="checkbox" id='<?php echo $result['id'] ?>'
-                                    class="ActivePassiv" <?php echo $result['active'] == 1 ? 'checked' : '' ?> />  
+                                    class="ActivePassive" <?php echo $result['active'] == 1 ? 'checked' : '' ?> />  
                                     <!--Let's pay attention to what is written to the class in the input. We will send this data to our file named "activedata.js" -->
                                      <span class="slider"></span>
                                 </label>

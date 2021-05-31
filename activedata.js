@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('.ActivePassiv').click(function (event) {
+    $('.ActivePassive').click(function (event) {
         var id = $(this).attr("id");  //we get the id value
 
         var status = ($(this).is(':checked')) ? '1' : '0';
@@ -7,7 +7,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: 'POST',
-            url: 'activepassiv.php',  //We indicate the page we are processing
+            url: 'activepassive.php',  //We indicate the page we are processing
             data: {id: id, status: status}, //We send our data
             success: function (result) {
                 $('#result').text(result);
