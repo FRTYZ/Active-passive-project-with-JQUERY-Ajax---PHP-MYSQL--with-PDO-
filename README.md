@@ -201,5 +201,5 @@ try {
 
 
 
-Good Koding
+Good encodings
 
