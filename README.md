@@ -40,7 +40,7 @@ Note=Apply the Active column of our Database Table with the data type "int" and 
                         <th>Active</th>                       
                     </thead>
                     <?php
-                    include('fonk.php'); // We include our database on our pages
+                    include('fonc.php'); // We include our database on our pages
                     $query = $connect->prepare("Select * from products"); // We write our query to sort our data by id
                     $query->execute(); // We start the query
 
@@ -55,7 +55,7 @@ Note=Apply the Active column of our Database Table with the data type "int" and 
                                 <label class="switch">
                                     <!-- We added id and active (1 or 0) information to our checkbox -->
                                     <input type="checkbox" id='<?php echo $result['id'] ?>'
-                                    class="ActivePassiv" <?php echo $result['active'] == 1 ? 'checked' : '' ?> />  
+                                    class="ActivePassive" <?php echo $result['active'] == 1 ? 'checked' : '' ?> />  
                                     <!--Let's pay attention to what is written to the class in the input. We will send this data to our file named "activedata.js" -->
                                      <span class="slider"></span>
                                 </label>
@@ -128,19 +128,19 @@ Note=Apply the Active column of our Database Table with the data type "int" and 
 ```
 <?php
 if ($_POST) { //We check if there is a post
-    include("fonk.php"); //connecting to database
+    include("fonc.php"); //connecting to database
 
     //we take variables as integers
     $id = (int)$_POST['id'];
     $status = (int)$_POST['status'];
 
 
-    $satir = array('id' => $id,
+    $line = array('id' => $id,
         'status' => $status,
     );
     // We write our data update query.
     $sql = "UPDATE products SET active=:status WHERE id=:id;";
-    $status = $connect->prepare($sql)->execute($satir);    
+    $status = $connect->prepare($sql)->execute($line);    
     echo $id . " Numbered Data Changed";
 }
 ?>
@@ -150,7 +150,7 @@ if ($_POST) { //We check if there is a post
 
 ```
 $(document).ready(function () {
-    $('.ActivePassiv').click(function (event) {
+    $('.ActivePassive').click(function (event) {
         var id = $(this).attr("id");  //we get the id value
 
         var status = ($(this).is(':checked')) ? '1' : '0';
@@ -158,7 +158,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: 'POST',
-            url: 'activepassiv.php',  //We indicate the page we are processing
+            url: 'activepassive.php',  //We indicate the page we are processing
             data: {id: id, status: status}, //We send our data
             success: function (result) {
                 $('#result').text(result);
